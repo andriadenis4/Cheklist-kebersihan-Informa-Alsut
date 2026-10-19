@@ -4,7 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import { MANAGERS_DATABASE, DEFAULT_USERS_DATABASE, createCleanDayChecklist, getTodayDateString } from './src/data/defaultChecklist.ts';
-import { DayChecklist, ShiftRecord, ShiftType } from './src/types/checklist.ts';
+import type { DayChecklist, ShiftRecord, ShiftType } from './src/types/checklist.ts';
 
 dotenv.config();
 
@@ -12,8 +12,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = Number(process.env.PORT) || 3000;
 const isProd = process.env.NODE_ENV === 'production';
+const PORT = isProd ? (Number(process.env.PORT) || 8080) : 3000;
 
 // Allow json bodies up to 25MB for realtime camera captures
 app.use(express.json({ limit: '25mb' }));

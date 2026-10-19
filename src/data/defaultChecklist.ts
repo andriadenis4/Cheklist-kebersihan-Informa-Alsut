@@ -1,4 +1,4 @@
-import { ChecklistItem, DayChecklist, PetugasShift } from '../types/checklist';
+import type { ChecklistItem, DayChecklist, PetugasShift } from '../types/checklist.ts';
 
 export const MANAGERS_DATABASE = [
   { nip: '111711', dob: '28071989', name: 'ABDUL HAKIM', role: 'manager' as const },
