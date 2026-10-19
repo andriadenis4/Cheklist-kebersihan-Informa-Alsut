@@ -1,0 +1,6 @@
+{
+  "name": "Cheklist Kebersihan Informa Alam Sutera",
+  "description": "Dashboard dan sistem checklist kebersihan harian Informa Alam Sutera dengan validasi kamera realtime dan GPS.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
